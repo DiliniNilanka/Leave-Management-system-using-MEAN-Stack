@@ -1,0 +1,26 @@
+<div>
+<legend>Leave Summary</legend><br>
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">email</th>
+      <th scope="col">Leave Start</th>
+      <th scope="col">Leave End</th>
+      <th scope="col">Leave Type</th>
+      <th scope="col">Comment</th>
+      <th scope="col">State</th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let l of leave">
+      <th>{{l.email}}</th>
+      <th>{{l.lstart}}</th>
+      <td>{{l.lend}}</td>
+      <td>{{l.type}}</td>
+      <td>{{l.comment}}</td>
+      <td>{{l.state}}</td>
+    </tr>
+  </tbody>
+</table>
+</div>

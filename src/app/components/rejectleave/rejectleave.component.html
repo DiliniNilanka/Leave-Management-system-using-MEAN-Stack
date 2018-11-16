@@ -1,0 +1,27 @@
+<div>
+  <legend>Rejected Leave Summary</legend><br>
+<div>
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">Name</th>
+      <th scope="col">Leave Start</th>
+      <th scope="col">Leave End</th>
+      <th scope="col">Leave Type</th>
+      <th scope="col">Reason</th>
+      
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let l of leave">
+      <th>{{l.name}}</th>
+      <th>{{l.lstart}}</th>
+      <td>{{l.lend}}</td>
+      <td>{{l.ltype}}</td>
+      <td>{{l.comment}}</td>
+      
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>

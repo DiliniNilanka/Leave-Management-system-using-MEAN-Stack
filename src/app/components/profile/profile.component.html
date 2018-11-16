@@ -1,0 +1,103 @@
+<!--<div>
+	<h2>Profile</h2>
+	Name:<h6 *ngFor="let l of userdata">{{l.name}}</h6>
+
+
+</div>-->
+<div class="row">
+	<div class="side">
+      
+      <div>
+        <table>
+          <tr>
+
+            <td width="50%">
+              Name: 
+            </td>
+            <td width="80%">
+              {{user_name}}
+            </td>
+          </tr>
+          
+          <tr>
+
+            <td width="50%">
+              Email: 
+            </td>
+            <td width="80%">
+              {{user_email}}
+            </td>
+          </tr>
+          
+          <tr>
+
+            <td width="50%">
+              Reg No: 
+            </td>
+            <td width="80%">
+              {{r_n}}
+            </td>
+          </tr>
+          
+          <tr>
+
+            <td width="50%">
+              Available Casual: 
+            </td>
+            <td width="80%">
+              {{c_l}}
+            </td>
+          </tr>
+          
+          <tr>
+
+            <td width="50%">
+              Available sick: 
+            </td>
+            <td width="80%">
+              {{s_l}}
+            </td>
+          </tr>
+        </table>
+      </div>
+      <!--<img src="cinqueterre.jpg" class="img-circle" alt="Cinque Terre" width="304" height="236">
+      <div class="fakeimg" style="height:200px;">Image</div>
+      <h5 *ngFor="let l of userdata">{{l.email}}</h5>-->
+  </div>
+  <div class="main">
+    <div class="btn-group" role="group" aria-label="Basic example" ng-controller="redirectUrls">
+      <a routerLink="/newl"><button type="button" class="btn btn-secondary">Get Leave</button></a>
+      <button type="button" class="btn btn-secondary" (click)="getPending()">Pending Leave</button>
+      <!--<button type="button" class="btn btn-secondary"><a routerLink="">Aproved Leave</a></button>-->
+    </div>
+    <br>
+    <br>
+    <legend>Leave Summary</legend>
+
+    <div>
+      <table class="table">
+        <thead>
+          <tr>
+            
+            <th scope="col">Leave Start</th>
+            <th scope="col">Leave End</th>
+            <th scope="col">Leave Type</th>
+            <th scope="col">Comment</th>
+            <th scope="col">Approved Date</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let l of user_leave">
+            
+            <th>{{l.lstart}}</th>
+            <td>{{l.lend}}</td>
+            <td>{{l.ltype}}</td>
+            <td>{{l.comment}}</td>
+            <td>{{l.app_day}}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    
+  </div>
+</div>

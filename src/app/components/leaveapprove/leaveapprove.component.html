@@ -1,0 +1,56 @@
+<div>
+
+<legend>Leave Summary</legend><br>
+
+<div><button class="btn btn-secondary" (click)="downlodPDF()">Approved Leave Report</button></div><br>
+
+<div>
+  <form class="form-inline my-2 my-lg-0" (submit)="SearchLeave()">
+
+      <button class="btn btn-secondary mr-sm-2" (click)="goBack()">Back</button>
+      
+      <input class="form-control mr-sm-2" type="text" placeholder="Search by date" name="date" [(ngModel)]="date">
+      <button class="btn btn-secondary my-2 my-sm-0" type="submit">Search</button>
+  </form>
+</div>
+  <br>
+  <!--<div ng-hide>
+    <table class="table">
+      <tr class="table-success">
+      <th scope="col">Email</th>
+      <th scope="col">Leave Start</th>
+      <th scope="col">Leave End</th>
+      <th scope="col">Leave Type</th>
+      <th scope="col">Comment</th>
+      <th scope="col">State</th>
+    </tr>
+
+    </table>
+  </div>-->
+<div id="content" #content>
+<table class="table" >
+  <thead>
+    <tr>
+      <th scope="col">Name</th>
+      <th scope="col">Leave Start</th>
+      <th scope="col">Leave End</th>
+      <th scope="col">Leave Type</th>
+      <th scope="col">Reason</th>
+      <th scope="col">Approved Date</th>
+      
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let l of leave">
+      <th>{{l.name}}</th>
+      <th>{{l.lstart}}</th>
+      <td>{{l.lend}}</td>
+      <td>{{l.ltype}}</td>
+      <td>{{l.comment}}</td>
+      <td>{{l.app_day}}</td>
+      
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>

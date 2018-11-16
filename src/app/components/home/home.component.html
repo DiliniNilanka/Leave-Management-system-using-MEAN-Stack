@@ -1,0 +1,50 @@
+
+
+<div>
+  <br>
+  <div class="btn-group" role="group" aria-label="Basic example">
+  <button type="button" class="btn btn-secondary" (click)="Approve()">Approved Leave</button>
+  <button type="button" class="btn btn-secondary" (click)="Reject()">Rejected Leave</button>
+  <button type="button" class="btn btn-secondary" (click)="Add()">Add New User</button>
+  <a routerLink="/newl"><button type="button" class="btn btn-secondary">Get Leave</button></a>
+  
+</div>
+<legend>Leave Summary</legend><br>
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">Name</th>
+      <th scope="col">Leave Start</th>
+      <th scope="col">Leave End</th>
+      <th scope="col">Days</th>
+      <th scope="col">Leave Type</th>
+      <th scope="col">Reason</th>
+      <th scope="col">Available Casual</th>
+      <th scope="col">Available Sick</th>
+      <!--<th scope="col">State</th>-->
+      <th scope="col">To Approve</th>
+      <th scope="col">To Reject</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let l of leave">
+      <th>{{l.name}}</th>
+      <th>{{l.lstart}}</th>
+      <th>{{l.lend}}</th>
+      <th>{{l.days}}</th>
+      <th>{{l.ltype}}</th>
+      <th>{{l.comment}}</th>
+      <th>{{l.available_casual}}</th>
+      <th>{{l.available_sick}}</th>
+      <!--<th>{{l.state}}</th>-->
+      <th>
+        <button type="button" class="btn btn-secondary btn-sm" (click)="onClickMe(l)">Approve</button>
+      </th>
+      <th>
+        <button type="button" class="btn btn-secondary btn-sm" (click)="forReject(l)">Reject</button>
+      </th>
+      
+    </tr>
+  </tbody>
+</table>
+</div>

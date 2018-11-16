@@ -1,0 +1,64 @@
+<form (submit)="registerData()">
+  <fieldset>
+    <legend>Add New User</legend>
+    <hr>
+    <div class="form-group">
+      <label for="exampleInputEmail1">Registration Number</label>
+      <input type="text" class="form-control" placeholder="Enter user name" name="username" [(ngModel)]="username">
+    </div>
+    <div class="form-group">
+      <label for="exampleInputPassword1">Name</label>
+      <input type="text" class="form-control" placeholder="Enter name" name="name" [(ngModel)]="name">
+    </div>
+    <div class="form-group">
+      <label for="exampleInputEmail1">Email address</label>
+      <input type="email" class="form-control" placeholder="Enter email" name="email" [(ngModel)]="email">
+      
+    </div>
+    <div class="form-group">
+      <label for="exampleInputPassword1">Password</label>
+      <input type="password" class="form-control" placeholder="Password" name="password" [(ngModel)]="password">
+    </div>
+    <button type="submit" class="btn btn-primary">Add</button>
+  </fieldset>
+</form>
+<!--<div class="col-md-12"> 
+<div class="col-md-6">
+</div>  
+<div class="col-md-6">        
+<div class="panel panel-default">
+<div class="panel-heading">  </div> 
+<div class="panel-body">                
+
+<form (submit)="registerData()">
+  <fieldset>
+    <legend>Add New User</legend>
+    <hr>
+    <div class="form-group">
+      <label for="exampleInputEmail1">User Name</label>
+      <input type="text" class="form-control" placeholder="Enter user name" name="username" [(ngModel)]="username">
+    </div>
+    <div class="form-group">
+      <label for="exampleInputPassword1">Name</label>
+      <input type="text" class="form-control" placeholder="Enter name" name="name" [(ngModel)]="name">
+    </div>
+    <div class="form-group">
+      <label for="exampleInputEmail1">Email address</label>
+      <input type="email" class="form-control" placeholder="Enter email" name="email" [(ngModel)]="email">
+      <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+    </div>
+    <div class="form-group">
+      <label for="exampleInputPassword1">Password</label>
+      <input type="password" class="form-control" placeholder="Password" name="password" [(ngModel)]="password">
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </fieldset>
+</form>
+</div>
+</div>
+</div>
+<div class="col-md-3">
+</div>  
+
+
+</div>-->
